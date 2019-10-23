@@ -36,7 +36,8 @@
     "test": "npm run postinstall:web && ng test",
     "e2e": "npm run build:prod && mocha --timeout 300000 --require ts-node/register e2e/**/*.spec.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "sg": "electron ."
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.6",
@@ -56,12 +57,13 @@
     "@types/jasminewd2": "2.0.6",
     "@types/mocha": "5.2.7",
     "@types/node": "12.6.8",
+    "@types/oracledb": "4.0.4",
     "chai": "4.2.0",
     "codelyzer": "5.1.0",
     "conventional-changelog-cli": "2.0.21",
     "core-js": "3.1.4",
-    "electron": "6.0.10",
-    "electron-builder": "21.2.0",
+    "electron": "7.0.0",
+    "electron-builder": "22.1.0",
     "electron-reload": "1.5.0",
     "jasmine-core": "3.4.0",
     "jasmine-spec-reporter": "4.2.1",
@@ -83,5 +85,8 @@
   },
   "engines": {
     "node": ">=10.9.0"
+  },
+  "dependencies": {
+    "oracledb": "4.0.1"
   }
 }

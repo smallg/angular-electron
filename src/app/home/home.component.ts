@@ -10,6 +10,15 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    try {
+      const oracledb = require('oracledb');
+      console.log(oracledb);
+      console.log(oracledb.oracleClientVersion);
+    } catch (error) {
+      console.log(error);
+    }
+
+    console.log('oracledb required successfully');
   }
 
 }
